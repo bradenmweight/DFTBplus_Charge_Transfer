@@ -1,0 +1,17 @@
+10 350 0.5
+24
+hole_dyn_HOMO_acceptor
+1, 2, 3, 5, 6, 9, 10, 12, 13, 15, 16, 17, 18, 19, 20, 21, 23, 24, 25, 26, 27, 28, 29, 30
+
+
+WRITE(6,*) "Enter number of states (nstates), total time-steps (n_tau) and time-step(tau)"
+WRITE(6,*) "Enter number of nuclear trajectories"
+
+WRITE(6,*) "Enter the inner directory name where txt files are stored in each nuclear trajectory"
+WRITE(6,*) "like 'hole_dyn_HOMO_acceptor' or 'RK4_propg_1000_SH' etc."
+
+WRITE(6,*) "Enter the successful traj numbers separated by commas (1, 3, 10, etc.)"
+WRITE(6,*) "This feature is useful when some trajs fail"
+
+echo "1, 2, 3, 5, 6, 9, 10, 12, 13, 15, 16, 17, 18, 19, 20, 21, 23, 24, 25, 26, 27, 28, 29, 30" | sed 's/,/\n/g' | wc -l
+

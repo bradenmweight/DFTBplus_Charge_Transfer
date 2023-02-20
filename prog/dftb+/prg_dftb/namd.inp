@@ -1,0 +1,57 @@
+.true.                    ! true => perform nonadiabatic dynamics calculations
+.false.                   ! true => Print EigVecs and Overlap for each MD step
+.false.                   ! true => Print Overlap in binary format
+.false.                   ! true => Print Eigvals for each MD step
+.false.                   ! true => Write Bq Coeff's in B_q_dir for each MD step
+.true., .true.             ! true, true => Fix phase and find the matching eigenvector from the previous step and calculate phase
+.true.                    ! true => Write Same MO overlap across timesteps (phase related) 
+.true.                    ! true => Write Coherence between nSurf. So, nSurf*nSurf matrix
+0.1 1                     ! timeStep, loopIncrement. Remember timeStep is Overwritten by DFTB+ input
+307 316                   ! beginSurfID, endSurfId
+2                         ! 1 = Short-time, 2 = RK4, 3 = Liouville
+1                         ! 1 = HST, 2 = Frank, 3 = Meek-Levine way of calculating Derviative Coupling.
+.false.                   ! perform GS orthonormalization during Derivative Coupling calculation
+.false., .false., .false. ! tWriteDervCplng, tWriteMOOverlap, tWriteGSMOOverlap
+99, .true.                ! nInterPolSteps , true => write interpolated eigvals and DervCplng
+"./"                      ! path for results dir
+3                         ! no.of fragments
+1 178
+179 356
+357 596
+2                         ! 1 = Ehrenfest, 2 = FSSH, 3 = QD-PLPI, 4 = MMST
+1                         ! 1 = HST-FSSH, 2 = Tully-FSSH, 3 = GFSH, 4 = LS-FSSH
+.true.                    ! true => Use predefined Random Seed
+123456789                 ! random seed(1)
+987654321                 ! random seed(2)
+.true.                    ! true => write g_kj (Hopping probabilities). k=active state 
+0.000000001               ! All Random numbers below this one will be omitted 
+1000                      ! nFSSHTraj
+
+!--------------------------------------------------------------------------
+
+ read(fdNAMDInp,*) tNAMD
+ read(fdNAMDInp,*) tPrintEvecAndOvlp
+ read(fdNAMDInp,*) tWriteOvlpBin
+ read(fdNAMDInp,*) tPrintEigVal
+ read(fdNAMDInp,*) tWriteBqCoeff
+ read(fdNAMDInp,*) timeStep, loopIncrement
+ read(fdNAMDInp,*) beginSurfId, endSurfId
+ read(fdNAMDInp,*) iBqPropagScheme
+ read(fdNAMDInp,*) nIntPolSteps
+ read(fdNAMDInp,*) resultsDir
+ read(fdNAMDInp,*) nFrags
+ ALLOCATE_(beginAOId, (nFrags))
+ ALLOCATE_(endAOId, (nFrags))
+ ! read the orbitals corresponding to each fragment
+ do iFrag = 1, nFrags
+   read(fdNAMDInp,*) beginAOId(iFrag), endAOId(iFrag)
+ end do
+ read(fdNAMDInp,*) iNAMDMethod
+ read(fdNAMDInp,*) nFSSHTraj
+
+ nSurf = endSurfId - beginSurfId + 1
+ timeStep = deltaT*au__fs ! deltaT is the MD timeStep
+
+ write(*,*) "================ IMPORTANT NOTE ==============="
+ write(*,*) "Entered timeStep through namd.inp is overwritten &
+   & by the MD timStep entered in dftb_in.hsd file "

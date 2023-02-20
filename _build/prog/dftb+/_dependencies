@@ -1,0 +1,1131 @@
+
+# 1 "/home/syamija2/Softwares/dftb/modified_dftb_17.1/dftbplus-17.1/prog/dftb+/prg_dftb/make.deps"
+# 1 "<built-in>"
+# 1 "<command-line>"
+
+
+
+# 1 "/usr/include/stdc-predef.h" 1 3 4
+
+# 17 "/usr/include/stdc-predef.h" 3 4
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# 3 "<command-line>" 2
+# 1 "/home/syamija2/Softwares/dftb/modified_dftb_17.1/dftbplus-17.1/prog/dftb+/prg_dftb/make.deps"
+dftbplus.o: _mod_shift _mod_geoopt _mod_mainio _mod_charmanip _mod_initprogram _mod_scc _mod_nonscc _mod_sparse2dense _mod_lapackroutines _mod_inputdata_module _mod_populations allocate.h assert.h _mod_numderivs2 _mod_energies _mod_elecconstraints _mod_angmomentum _mod_externalcharges _mod_potentials _mod_formatout _mod_spin _mod_xmlf90 _mod_dftbplusu _mod_eigenvects _mod_orbitalequiv _mod_linresp_module _mod_blasroutines _mod_parser _mod_stress _mod_taggedoutput _mod_densitymatrix _mod_simplealgebra _mod_pmlocalisation _mod_mdcommon _mod_fileid _mod_constants _mod_etemp _mod_repulsive _mod_spinorbit _mod_hsdutils _mod_mixer _mod_forces
+dftbplus.o = dftbplus.o $(_mod_shift) $(_mod_geoopt) $(_mod_mainio) $(_mod_charmanip) $(_mod_initprogram) $(_mod_scc) $(_mod_nonscc) $(_mod_sparse2dense) $(_mod_lapackroutines) $(_mod_inputdata_module) $(_mod_populations) $(allocate.h) $(assert.h) $(_mod_numderivs2) $(_mod_energies) $(_mod_elecconstraints) $(_mod_angmomentum) $(_mod_externalcharges) $(_mod_potentials) $(_mod_formatout) $(_mod_spin) $(_mod_xmlf90) $(_mod_dftbplusu) $(_mod_eigenvects) $(_mod_orbitalequiv) $(_mod_linresp_module) $(_mod_blasroutines) $(_mod_parser) $(_mod_stress) $(_mod_taggedoutput) $(_mod_densitymatrix) $(_mod_simplealgebra) $(_mod_pmlocalisation) $(_mod_mdcommon) $(_mod_fileid) $(_mod_constants) $(_mod_etemp) $(_mod_repulsive) $(_mod_spinorbit) $(_mod_hsdutils) $(_mod_mixer) $(_mod_forces)
+
+eigenvects.o: _mod_sparse2dense _mod_commontypes allocate.h _mod_message _mod_angmomentum _mod_eigensolver _mod_accuracy assert.h
+eigenvects.o = eigenvects.o $(_mod_sparse2dense) $(_mod_commontypes) $(allocate.h) $(_mod_message) $(_mod_angmomentum) $(_mod_eigensolver) $(_mod_accuracy) $(assert.h)
+_mod_eigenvects: eigenvects.o
+_mod_eigenvects = $(eigenvects.o)
+
+initprogram.o: _mod_spin _mod_geoopt _mod_mainio _mod_coulomb _mod_diismixer _mod_dummytherm _mod_scc _mod_nonscc assert.h _mod_dispersions _mod_slakocont _mod_inputdata_module _mod_berendsentherm allocate.h _mod_simplemixer _mod_numderivs2 _mod_conjgrad _mod_xlbomd_module _mod_thirdorder_module _mod_thermostat _mod_sccinit _mod_shortgamma _mod_dftbplusu _mod_nhctherm _mod_orbitalequiv _mod_broydenmixer _mod_linkedlist _mod_gdiis _mod_message _mod_ranlux _mod_commontypes _mod_mdintegrator _mod_tempprofile _mod_stress _mod_simplealgebra _mod_mdcommon _mod_accuracy _mod_velocityverlet _mod_lapackroutines _mod_fileid _mod_constants _mod_repcont _mod_sorting _mod_etemp _mod_intrinsicpr _mod_steepdesc _mod_ipisocket _mod_mixer _mod_periodic _mod_andersonmixer _mod_andersentherm _mod_linresp_module _mod_fifo
+initprogram.o = initprogram.o $(_mod_spin) $(_mod_geoopt) $(_mod_mainio) $(_mod_coulomb) $(_mod_diismixer) $(_mod_dummytherm) $(_mod_scc) $(_mod_nonscc) $(assert.h) $(_mod_dispersions) $(_mod_slakocont) $(_mod_inputdata_module) $(_mod_berendsentherm) $(allocate.h) $(_mod_simplemixer) $(_mod_numderivs2) $(_mod_conjgrad) $(_mod_xlbomd_module) $(_mod_thirdorder_module) $(_mod_thermostat) $(_mod_sccinit) $(_mod_shortgamma) $(_mod_dftbplusu) $(_mod_nhctherm) $(_mod_orbitalequiv) $(_mod_broydenmixer) $(_mod_linkedlist) $(_mod_gdiis) $(_mod_message) $(_mod_ranlux) $(_mod_commontypes) $(_mod_mdintegrator) $(_mod_tempprofile) $(_mod_stress) $(_mod_simplealgebra) $(_mod_mdcommon) $(_mod_accuracy) $(_mod_velocityverlet) $(_mod_lapackroutines) $(_mod_fileid) $(_mod_constants) $(_mod_repcont) $(_mod_sorting) $(_mod_etemp) $(_mod_intrinsicpr) $(_mod_steepdesc) $(_mod_ipisocket) $(_mod_mixer) $(_mod_periodic) $(_mod_andersonmixer) $(_mod_andersentherm) $(_mod_linresp_module) $(_mod_fifo)
+_mod_initprogram: initprogram.o
+_mod_initprogram = $(initprogram.o)
+
+inputdata.o: _mod_commontypes allocate.h _mod_ipisocket _mod_message _mod_repcont _mod_xlbomd_module _mod_slakocont _mod_linkedlist _mod_linresp_module _mod_accuracy _mod_dispersions assert.h _mod_typegeometry
+inputdata.o = inputdata.o $(_mod_commontypes) $(allocate.h) $(_mod_ipisocket) $(_mod_message) $(_mod_repcont) $(_mod_xlbomd_module) $(_mod_slakocont) $(_mod_linkedlist) $(_mod_linresp_module) $(_mod_accuracy) $(_mod_dispersions) $(assert.h) $(_mod_typegeometry)
+_mod_inputdata_module: inputdata.o
+_mod_inputdata_module = $(inputdata.o)
+
+mainio.o: _mod_sparse2dense _mod_commontypes allocate.h assert.h _mod_blasroutines _mod_fifo _mod_linkedlist _mod_charmanip _mod_periodic _mod_accuracy _mod_constants
+mainio.o = mainio.o $(_mod_sparse2dense) $(_mod_commontypes) $(allocate.h) $(assert.h) $(_mod_blasroutines) $(_mod_fifo) $(_mod_linkedlist) $(_mod_charmanip) $(_mod_periodic) $(_mod_accuracy) $(_mod_constants)
+_mod_mainio: mainio.o
+_mod_mainio = $(mainio.o)
+
+oldcompat.o: _mod_xmlutils _mod_message _mod_hsdutils _mod_charmanip _mod_hsdutils2 _mod_xmlf90 _mod_accuracy
+oldcompat.o = oldcompat.o $(_mod_xmlutils) $(_mod_message) $(_mod_hsdutils) $(_mod_charmanip) $(_mod_hsdutils2) $(_mod_xmlf90) $(_mod_accuracy)
+_mod_oldcompat: oldcompat.o
+_mod_oldcompat = $(oldcompat.o)
+
+parser.o: _mod_charmanip _mod_stringlist _mod_hsdutils2 _mod_slakoeqgrid assert.h _mod_dispersions _mod_slakocont _mod_inputdata_module allocate.h _mod_ipisocket _mod_lapackroutines _mod_linkedlist _mod_xmlf90 _mod_unitconversion _mod_generallist _mod_reppoly _mod_message _mod_commontypes _mod_repcont _mod_oldcompat _mod_simplealgebra _mod_fileid _mod_wrappedpointers _mod_hsdparser _mod_accuracy _mod_constants _mod_typegeometryhsd _mod_hsdutils _mod_periodic _mod_oldskdata _mod_repspline
+parser.o = parser.o $(_mod_charmanip) $(_mod_stringlist) $(_mod_hsdutils2) $(_mod_slakoeqgrid) $(assert.h) $(_mod_dispersions) $(_mod_slakocont) $(_mod_inputdata_module) $(allocate.h) $(_mod_ipisocket) $(_mod_lapackroutines) $(_mod_linkedlist) $(_mod_xmlf90) $(_mod_unitconversion) $(_mod_generallist) $(_mod_reppoly) $(_mod_message) $(_mod_commontypes) $(_mod_repcont) $(_mod_oldcompat) $(_mod_simplealgebra) $(_mod_fileid) $(_mod_wrappedpointers) $(_mod_hsdparser) $(_mod_accuracy) $(_mod_constants) $(_mod_typegeometryhsd) $(_mod_hsdutils) $(_mod_periodic) $(_mod_oldskdata) $(_mod_repspline)
+_mod_parser: parser.o
+_mod_parser = $(parser.o)
+
+# 1 "/home/syamija2/Softwares/dftb/modified_dftb_17.1/dftbplus-17.1/prog/dftb+/lib_math/make.deps"
+# 1 "<built-in>"
+# 1 "<command-line>"
+
+
+
+# 1 "/usr/include/stdc-predef.h" 1 3 4
+
+# 17 "/usr/include/stdc-predef.h" 3 4
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# 3 "<command-line>" 2
+# 1 "/home/syamija2/Softwares/dftb/modified_dftb_17.1/dftbplus-17.1/prog/dftb+/lib_math/make.deps"
+angmomentum.o: _mod_accuracy _mod_commontypes assert.h allocate.h _mod_qm
+angmomentum.o = angmomentum.o $(_mod_accuracy) $(_mod_commontypes) $(assert.h) $(allocate.h) $(_mod_qm)
+_mod_angmomentum: angmomentum.o
+_mod_angmomentum = $(angmomentum.o)
+
+bisect.o: _mod_accuracy
+bisect.o = bisect.o $(_mod_accuracy)
+_mod_bisect: bisect.o
+_mod_bisect = $(bisect.o)
+
+blasroutines.o: _mod_accuracy assert.h _mod_blas
+blasroutines.o = blasroutines.o $(_mod_accuracy) $(assert.h) $(_mod_blas)
+_mod_blasroutines: blasroutines.o
+_mod_blasroutines = $(blasroutines.o)
+
+csrmatrix.o: _mod_accuracy assert.h allocate.h
+csrmatrix.o = csrmatrix.o $(_mod_accuracy) $(assert.h) $(allocate.h)
+_mod_csrmatrix: csrmatrix.o
+_mod_csrmatrix = $(csrmatrix.o)
+
+eigensolver.o: allocate.h _mod_message _mod_lapack _mod_blas _mod_accuracy assert.h
+eigensolver.o = eigensolver.o $(allocate.h) $(_mod_message) $(_mod_lapack) $(_mod_blas) $(_mod_accuracy) $(assert.h)
+_mod_eigensolver: eigensolver.o
+_mod_eigensolver = $(eigensolver.o)
+
+erfcalc.o: _mod_accuracy
+erfcalc.o = erfcalc.o $(_mod_accuracy)
+_mod_erfcalc: erfcalc.o
+_mod_erfcalc = $(erfcalc.o)
+
+
+
+
+
+
+
+errorfunction.o: _mod_accuracy
+errorfunction.o = errorfunction.o $(_mod_accuracy)
+_mod_errorfunction: errorfunction.o
+_mod_errorfunction = $(errorfunction.o)
+
+
+factorial.o: assert.h _mod_accuracy
+factorial.o = factorial.o $(assert.h) $(_mod_accuracy)
+_mod_factorial: factorial.o
+_mod_factorial = $(factorial.o)
+
+hermite.o: _mod_accuracy assert.h allocate.h
+hermite.o = hermite.o $(_mod_accuracy) $(assert.h) $(allocate.h)
+_mod_hermite: hermite.o
+_mod_hermite = $(hermite.o)
+
+interpolation.o: _mod_accuracy assert.h _mod_message
+interpolation.o = interpolation.o $(_mod_accuracy) $(assert.h) $(_mod_message)
+_mod_interpolation: interpolation.o
+_mod_interpolation = $(interpolation.o)
+
+lapackroutines.o: _mod_accuracy _mod_lapack assert.h allocate.h _mod_message
+lapackroutines.o = lapackroutines.o $(_mod_accuracy) $(_mod_lapack) $(assert.h) $(allocate.h) $(_mod_message)
+_mod_lapackroutines: lapackroutines.o
+_mod_lapackroutines = $(lapackroutines.o)
+
+qm.o: _mod_accuracy assert.h
+qm.o = qm.o $(_mod_accuracy) $(assert.h)
+_mod_qm: qm.o
+_mod_qm = $(qm.o)
+
+ranlux.o: _mod_accuracy assert.h allocate.h
+ranlux.o = ranlux.o $(_mod_accuracy) $(assert.h) $(allocate.h)
+_mod_ranlux: ranlux.o
+_mod_ranlux = $(ranlux.o)
+
+simplealgebra.o: _mod_accuracy assert.h
+simplealgebra.o = simplealgebra.o $(_mod_accuracy) $(assert.h)
+_mod_simplealgebra: simplealgebra.o
+_mod_simplealgebra = $(simplealgebra.o)
+
+sorting.o: _mod_accuracy assert.h
+sorting.o = sorting.o $(_mod_accuracy) $(assert.h)
+_mod_sorting: sorting.o
+_mod_sorting = $(sorting.o)
+
+# 1 "/home/syamija2/Softwares/dftb/modified_dftb_17.1/dftbplus-17.1/prog/dftb+/lib_type/make.deps"
+# 1 "<built-in>"
+# 1 "<command-line>"
+
+
+
+# 1 "/usr/include/stdc-predef.h" 1 3 4
+
+# 17 "/usr/include/stdc-predef.h" 3 4
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# 3 "<command-line>" 2
+# 1 "/home/syamija2/Softwares/dftb/modified_dftb_17.1/dftbplus-17.1/prog/dftb+/lib_type/make.deps"
+commontypes.o: _mod_accuracy allocate.h
+commontypes.o = commontypes.o $(_mod_accuracy) $(allocate.h)
+_mod_commontypes: commontypes.o
+_mod_commontypes = $(commontypes.o)
+
+fifo.o: _mod_accuracy _mod_fileid assert.h allocate.h
+fifo.o = fifo.o $(_mod_accuracy) $(_mod_fileid) $(assert.h) $(allocate.h)
+_mod_fifo: fifo.o
+_mod_fifo = $(fifo.o)
+
+generallist.o: assert.h allocate.h
+generallist.o = generallist.o $(assert.h) $(allocate.h)
+_mod_generallist: generallist.o
+_mod_generallist = $(generallist.o)
+
+linkedlist.o: charmc.inc allocate.h intr1.inc assert.h real.inc realr1.inc int.inc charlc.inc _mod_accuracy
+linkedlist.o = linkedlist.o $(charmc.inc) $(allocate.h) $(intr1.inc) $(assert.h) $(real.inc) $(realr1.inc) $(int.inc) $(charlc.inc) $(_mod_accuracy)
+_mod_linkedlist: linkedlist.o
+_mod_linkedlist = $(linkedlist.o)
+
+oldskdata.o: _mod_fileid allocate.h _mod_reppoly _mod_repspline _mod_message _mod_accuracy assert.h _mod_constants
+oldskdata.o = oldskdata.o $(_mod_fileid) $(allocate.h) $(_mod_reppoly) $(_mod_repspline) $(_mod_message) $(_mod_accuracy) $(assert.h) $(_mod_constants)
+_mod_oldskdata: oldskdata.o
+_mod_oldskdata = $(oldskdata.o)
+
+stringlist.o: _mod_xmlf90 assert.h allocate.h
+stringlist.o = stringlist.o $(_mod_xmlf90) $(assert.h) $(allocate.h)
+_mod_stringlist: stringlist.o
+_mod_stringlist = $(stringlist.o)
+
+typegeometry.o: _mod_accuracy allocate.h
+typegeometry.o = typegeometry.o $(_mod_accuracy) $(allocate.h)
+_mod_typegeometry: typegeometry.o
+_mod_typegeometry = $(typegeometry.o)
+
+typegeometryhsd.o: _mod_tokenreader allocate.h _mod_charmanip _mod_stringlist _mod_simplealgebra _mod_hsdutils _mod_linkedlist _mod_hsdutils2 _mod_xmlf90 _mod_typegeometry _mod_unitconversion
+typegeometryhsd.o = typegeometryhsd.o $(_mod_tokenreader) $(allocate.h) $(_mod_charmanip) $(_mod_stringlist) $(_mod_simplealgebra) $(_mod_hsdutils) $(_mod_linkedlist) $(_mod_hsdutils2) $(_mod_xmlf90) $(_mod_typegeometry) $(_mod_unitconversion)
+_mod_typegeometryhsd: typegeometryhsd.o
+_mod_typegeometryhsd = $(typegeometryhsd.o)
+
+wrappedpointers.o: _mod_accuracy
+wrappedpointers.o = wrappedpointers.o $(_mod_accuracy)
+_mod_wrappedpointers: wrappedpointers.o
+_mod_wrappedpointers = $(wrappedpointers.o)
+
+# 1 "/home/syamija2/Softwares/dftb/modified_dftb_17.1/dftbplus-17.1/prog/dftb+/lib_geoopt/make.deps"
+# 1 "<built-in>"
+# 1 "<command-line>"
+
+
+
+# 1 "/usr/include/stdc-predef.h" 1 3 4
+
+# 17 "/usr/include/stdc-predef.h" 3 4
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# 3 "<command-line>" 2
+# 1 "/home/syamija2/Softwares/dftb/modified_dftb_17.1/dftbplus-17.1/prog/dftb+/lib_geoopt/make.deps"
+conjgrad.o: _mod_accuracy assert.h allocate.h _mod_linemin
+conjgrad.o = conjgrad.o $(_mod_accuracy) $(assert.h) $(allocate.h) $(_mod_linemin)
+_mod_conjgrad: conjgrad.o
+_mod_conjgrad = $(conjgrad.o)
+
+gdiis.o: _mod_accuracy _mod_diismixer assert.h allocate.h
+gdiis.o = gdiis.o $(_mod_accuracy) $(_mod_diismixer) $(assert.h) $(allocate.h)
+_mod_gdiis: gdiis.o
+_mod_gdiis = $(gdiis.o)
+
+geoopt.o: _mod_steepdesc _mod_gdiis _mod_accuracy allocate.h _mod_conjgrad
+geoopt.o = geoopt.o $(_mod_steepdesc) $(_mod_gdiis) $(_mod_accuracy) $(allocate.h) $(_mod_conjgrad)
+_mod_geoopt: geoopt.o
+_mod_geoopt = $(geoopt.o)
+
+linemin.o: _mod_accuracy assert.h allocate.h _mod_constants
+linemin.o = linemin.o $(_mod_accuracy) $(assert.h) $(allocate.h) $(_mod_constants)
+_mod_linemin: linemin.o
+_mod_linemin = $(linemin.o)
+
+steepdesc.o: _mod_accuracy assert.h allocate.h
+steepdesc.o = steepdesc.o $(_mod_accuracy) $(assert.h) $(allocate.h)
+_mod_steepdesc: steepdesc.o
+_mod_steepdesc = $(steepdesc.o)
+
+# 1 "/home/syamija2/Softwares/dftb/modified_dftb_17.1/dftbplus-17.1/prog/dftb+/lib_timedep/make.deps"
+# 1 "<built-in>"
+# 1 "<command-line>"
+
+
+
+# 1 "/usr/include/stdc-predef.h" 1 3 4
+
+# 17 "/usr/include/stdc-predef.h" 3 4
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# 3 "<command-line>" 2
+# 1 "/home/syamija2/Softwares/dftb/modified_dftb_17.1/dftbplus-17.1/prog/dftb+/lib_timedep/make.deps"
+
+
+
+
+
+
+linresp.o: _mod_commontypes _mod_fileid assert.h _mod_nonscc _mod_scc _mod_message _mod_accuracy _mod_slakocont
+linresp.o = linresp.o $(_mod_commontypes) $(_mod_fileid) $(assert.h) $(_mod_nonscc) $(_mod_scc) $(_mod_message) $(_mod_accuracy) $(_mod_slakocont)
+_mod_linresp_module: linresp.o
+_mod_linresp_module = $(linresp.o)
+
+
+linrespcommon.o: _mod_commontypes _mod_sorting assert.h _mod_blasroutines _mod_message _mod_accuracy
+linrespcommon.o = linrespcommon.o $(_mod_commontypes) $(_mod_sorting) $(assert.h) $(_mod_blasroutines) $(_mod_message) $(_mod_accuracy)
+_mod_linrespcommon: linrespcommon.o
+_mod_linrespcommon = $(linrespcommon.o)
+
+linrespgrad.o: _mod_commontypes _mod_constants _mod_sorting _mod_accuracy _mod_message _mod_nonscc _mod_blasroutines _mod_qm _mod_taggedoutput _mod_scc _mod_linrespcommon _mod_arpack _mod_shortgamma _mod_eigensolver assert.h _mod_slakocont
+linrespgrad.o = linrespgrad.o $(_mod_commontypes) $(_mod_constants) $(_mod_sorting) $(_mod_accuracy) $(_mod_message) $(_mod_nonscc) $(_mod_blasroutines) $(_mod_qm) $(_mod_taggedoutput) $(_mod_scc) $(_mod_linrespcommon) $(_mod_arpack) $(_mod_shortgamma) $(_mod_eigensolver) $(assert.h) $(_mod_slakocont)
+_mod_linrespgrad: linrespgrad.o
+_mod_linrespgrad = $(linrespgrad.o)
+
+# 1 "/home/syamija2/Softwares/dftb/modified_dftb_17.1/dftbplus-17.1/prog/dftb+/lib_md/make.deps"
+# 1 "<built-in>"
+# 1 "<command-line>"
+
+
+
+# 1 "/usr/include/stdc-predef.h" 1 3 4
+
+# 17 "/usr/include/stdc-predef.h" 3 4
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# 3 "<command-line>" 2
+# 1 "/home/syamija2/Softwares/dftb/modified_dftb_17.1/dftbplus-17.1/prog/dftb+/lib_md/make.deps"
+andersentherm.o: allocate.h assert.h _mod_ranlux _mod_tempprofile _mod_mdcommon _mod_accuracy
+andersentherm.o = andersentherm.o $(allocate.h) $(assert.h) $(_mod_ranlux) $(_mod_tempprofile) $(_mod_mdcommon) $(_mod_accuracy)
+_mod_andersentherm: andersentherm.o
+_mod_andersentherm = $(andersentherm.o)
+
+berendsentherm.o: allocate.h assert.h _mod_ranlux _mod_tempprofile _mod_mdcommon _mod_accuracy
+berendsentherm.o = berendsentherm.o $(allocate.h) $(assert.h) $(_mod_ranlux) $(_mod_tempprofile) $(_mod_mdcommon) $(_mod_accuracy)
+_mod_berendsentherm: berendsentherm.o
+_mod_berendsentherm = $(berendsentherm.o)
+
+dummytherm.o: _mod_accuracy _mod_mdcommon assert.h allocate.h _mod_ranlux
+dummytherm.o = dummytherm.o $(_mod_accuracy) $(_mod_mdcommon) $(assert.h) $(allocate.h) $(_mod_ranlux)
+_mod_dummytherm: dummytherm.o
+_mod_dummytherm = $(dummytherm.o)
+
+extlagrangian.o: _mod_accuracy assert.h _mod_message
+extlagrangian.o = extlagrangian.o $(_mod_accuracy) $(assert.h) $(_mod_message)
+_mod_extlagrangian_module: extlagrangian.o
+_mod_extlagrangian_module = $(extlagrangian.o)
+
+mdcommon.o: _mod_accuracy _mod_ranlux assert.h allocate.h _mod_constants
+mdcommon.o = mdcommon.o $(_mod_accuracy) $(_mod_ranlux) $(assert.h) $(allocate.h) $(_mod_constants)
+_mod_mdcommon: mdcommon.o
+_mod_mdcommon = $(mdcommon.o)
+
+mdintegrator.o: _mod_accuracy assert.h allocate.h _mod_velocityverlet
+mdintegrator.o = mdintegrator.o $(_mod_accuracy) $(assert.h) $(allocate.h) $(_mod_velocityverlet)
+_mod_mdintegrator: mdintegrator.o
+_mod_mdintegrator = $(mdintegrator.o)
+
+nhctherm.o: _mod_energies allocate.h assert.h _mod_ranlux _mod_tempprofile _mod_message _mod_mdcommon _mod_accuracy
+nhctherm.o = nhctherm.o $(_mod_energies) $(allocate.h) $(assert.h) $(_mod_ranlux) $(_mod_tempprofile) $(_mod_message) $(_mod_mdcommon) $(_mod_accuracy)
+_mod_nhctherm: nhctherm.o
+_mod_nhctherm = $(nhctherm.o)
+
+tempprofile.o: _mod_accuracy assert.h allocate.h
+tempprofile.o = tempprofile.o $(_mod_accuracy) $(assert.h) $(allocate.h)
+_mod_tempprofile: tempprofile.o
+_mod_tempprofile = $(tempprofile.o)
+
+thermostat.o: allocate.h _mod_accuracy _mod_dummytherm _mod_berendsentherm _mod_andersentherm _mod_nhctherm
+thermostat.o = thermostat.o $(allocate.h) $(_mod_accuracy) $(_mod_dummytherm) $(_mod_berendsentherm) $(_mod_andersentherm) $(_mod_nhctherm)
+_mod_thermostat: thermostat.o
+_mod_thermostat = $(thermostat.o)
+
+velocityverlet.o: allocate.h _mod_fileid _mod_thermostat _mod_message _mod_accuracy assert.h
+velocityverlet.o = velocityverlet.o $(allocate.h) $(_mod_fileid) $(_mod_thermostat) $(_mod_message) $(_mod_accuracy) $(assert.h)
+_mod_velocityverlet: velocityverlet.o
+_mod_velocityverlet = $(velocityverlet.o)
+
+xlbomd.o: _mod_accuracy _mod_extlagrangian_module assert.h _mod_message
+xlbomd.o = xlbomd.o $(_mod_accuracy) $(_mod_extlagrangian_module) $(assert.h) $(_mod_message)
+_mod_xlbomd_module: xlbomd.o
+_mod_xlbomd_module = $(xlbomd.o)
+
+# 1 "/home/syamija2/Softwares/dftb/modified_dftb_17.1/dftbplus-17.1/prog/dftb+/lib_extlibs/make.deps"
+# 1 "<built-in>"
+# 1 "<command-line>"
+
+
+
+# 1 "/usr/include/stdc-predef.h" 1 3 4
+
+# 17 "/usr/include/stdc-predef.h" 3 4
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# 3 "<command-line>" 2
+# 1 "/home/syamija2/Softwares/dftb/modified_dftb_17.1/dftbplus-17.1/prog/dftb+/lib_extlibs/make.deps"
+arpack.o: _mod_accuracy
+arpack.o = arpack.o $(_mod_accuracy)
+_mod_arpack: arpack.o
+_mod_arpack = $(arpack.o)
+
+blas.o: _mod_accuracy
+blas.o = blas.o $(_mod_accuracy)
+_mod_blas: blas.o
+_mod_blas = $(blas.o)
+
+dftd3.o: _mod_dftd3_api
+dftd3.o = dftd3.o $(_mod_dftd3_api)
+_mod_dftd3_module: dftd3.o
+_mod_dftd3_module = $(dftd3.o)
+
+fsockets.o: _mod_f90sockets
+fsockets.o = fsockets.o $(_mod_f90sockets)
+_mod_fsockets: fsockets.o
+_mod_fsockets = $(fsockets.o)
+
+lapack.o: _mod_accuracy
+lapack.o = lapack.o $(_mod_accuracy)
+_mod_lapack: lapack.o
+_mod_lapack = $(lapack.o)
+
+xmlf90.o: _mod_m_strings _mod_flib_dom _mod_flib_wxml
+xmlf90.o = xmlf90.o $(_mod_m_strings) $(_mod_flib_dom) $(_mod_flib_wxml)
+_mod_xmlf90: xmlf90.o
+_mod_xmlf90 = $(xmlf90.o)
+
+# 1 "/home/syamija2/Softwares/dftb/modified_dftb_17.1/dftbplus-17.1/prog/dftb+/lib_mixer/make.deps"
+# 1 "<built-in>"
+# 1 "<command-line>"
+
+
+
+# 1 "/usr/include/stdc-predef.h" 1 3 4
+
+# 17 "/usr/include/stdc-predef.h" 3 4
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# 3 "<command-line>" 2
+# 1 "/home/syamija2/Softwares/dftb/modified_dftb_17.1/dftbplus-17.1/prog/dftb+/lib_mixer/make.deps"
+andersonmixer.o: _mod_accuracy _mod_lapackroutines assert.h allocate.h
+andersonmixer.o = andersonmixer.o $(_mod_accuracy) $(_mod_lapackroutines) $(assert.h) $(allocate.h)
+_mod_andersonmixer: andersonmixer.o
+_mod_andersonmixer = $(andersonmixer.o)
+
+broydenmixer.o: _mod_lapackroutines allocate.h assert.h _mod_blasroutines _mod_fifo _mod_message _mod_accuracy
+broydenmixer.o = broydenmixer.o $(_mod_lapackroutines) $(allocate.h) $(assert.h) $(_mod_blasroutines) $(_mod_fifo) $(_mod_message) $(_mod_accuracy)
+_mod_broydenmixer: broydenmixer.o
+_mod_broydenmixer = $(broydenmixer.o)
+
+diismixer.o: _mod_accuracy _mod_lapackroutines assert.h allocate.h
+diismixer.o = diismixer.o $(_mod_accuracy) $(_mod_lapackroutines) $(assert.h) $(allocate.h)
+_mod_diismixer: diismixer.o
+_mod_diismixer = $(diismixer.o)
+
+mixer.o: _mod_broydenmixer allocate.h assert.h _mod_message _mod_diismixer _mod_simplemixer _mod_andersonmixer _mod_accuracy
+mixer.o = mixer.o $(_mod_broydenmixer) $(allocate.h) $(assert.h) $(_mod_message) $(_mod_diismixer) $(_mod_simplemixer) $(_mod_andersonmixer) $(_mod_accuracy)
+_mod_mixer: mixer.o
+_mod_mixer = $(mixer.o)
+
+simplemixer.o: _mod_accuracy assert.h allocate.h
+simplemixer.o = simplemixer.o $(_mod_accuracy) $(assert.h) $(allocate.h)
+_mod_simplemixer: simplemixer.o
+_mod_simplemixer = $(simplemixer.o)
+
+# 1 "/home/syamija2/Softwares/dftb/modified_dftb_17.1/dftbplus-17.1/prog/dftb+/lib_dftb/make.deps"
+# 1 "<built-in>"
+# 1 "<command-line>"
+
+
+
+# 1 "/usr/include/stdc-predef.h" 1 3 4
+
+# 17 "/usr/include/stdc-predef.h" 3 4
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# 3 "<command-line>" 2
+# 1 "/home/syamija2/Softwares/dftb/modified_dftb_17.1/dftbplus-17.1/prog/dftb+/lib_dftb/make.deps"
+chargeconstr.o: _mod_accuracy assert.h allocate.h
+chargeconstr.o = chargeconstr.o $(_mod_accuracy) $(assert.h) $(allocate.h)
+_mod_chargeconstr: chargeconstr.o
+_mod_chargeconstr = $(chargeconstr.o)
+
+charges.o: _mod_accuracy _mod_commontypes assert.h
+charges.o = charges.o $(_mod_accuracy) $(_mod_commontypes) $(assert.h)
+_mod_charges: charges.o
+_mod_charges = $(charges.o)
+
+coulomb.o: _mod_constants assert.h _mod_message _mod_errorfunction _mod_accuracy allocate.h
+coulomb.o = coulomb.o $(_mod_constants) $(assert.h) $(_mod_message) $(_mod_errorfunction) $(_mod_accuracy) $(allocate.h)
+_mod_coulomb: coulomb.o
+_mod_coulomb = $(coulomb.o)
+
+densitymatrix.o: _mod_commontypes allocate.h _mod_sorting assert.h _mod_blasroutines _mod_accuracy
+densitymatrix.o = densitymatrix.o $(_mod_commontypes) $(allocate.h) $(_mod_sorting) $(assert.h) $(_mod_blasroutines) $(_mod_accuracy)
+_mod_densitymatrix: densitymatrix.o
+_mod_densitymatrix = $(densitymatrix.o)
+
+dftbplusu.o: _mod_commontypes _mod_fileid assert.h _mod_message _mod_spin _mod_accuracy
+dftbplusu.o = dftbplusu.o $(_mod_commontypes) $(_mod_fileid) $(assert.h) $(_mod_message) $(_mod_spin) $(_mod_accuracy)
+_mod_dftbplusu: dftbplusu.o
+_mod_dftbplusu = $(dftbplusu.o)
+
+dispcommon.o: _mod_constants _mod_sorting assert.h _mod_errorfunction _mod_message _mod_simplealgebra _mod_accuracy
+dispcommon.o = dispcommon.o $(_mod_constants) $(_mod_sorting) $(assert.h) $(_mod_errorfunction) $(_mod_message) $(_mod_simplealgebra) $(_mod_accuracy)
+_mod_dispcommon: dispcommon.o
+_mod_dispcommon = $(dispcommon.o)
+
+dispdftd3.o: _mod_dispiface _mod_accuracy assert.h _mod_dftd3_module
+dispdftd3.o = dispdftd3.o $(_mod_dispiface) $(_mod_accuracy) $(assert.h) $(_mod_dftd3_module)
+_mod_dispdftd3_module: dispdftd3.o
+_mod_dispdftd3_module = $(dispdftd3.o)
+
+
+dispersions.o: _mod_dispiface _mod_dispuff_module _mod_dispslaterkirkw _mod_dispuffdata _mod_dispdftd3_module
+dispersions.o = dispersions.o $(_mod_dispiface) $(_mod_dispuff_module) $(_mod_dispslaterkirkw) $(_mod_dispuffdata) $(_mod_dispdftd3_module)
+_mod_dispersions: dispersions.o
+_mod_dispersions = $(dispersions.o)
+
+
+
+
+
+
+
+dispiface.o: _mod_periodic _mod_accuracy
+dispiface.o = dispiface.o $(_mod_periodic) $(_mod_accuracy)
+_mod_dispiface: dispiface.o
+_mod_dispiface = $(dispiface.o)
+
+dispslaterkirkw.o: _mod_constants _mod_lapackroutines _mod_dispiface _mod_periodic _mod_dispcommon _mod_message _mod_simplealgebra _mod_accuracy assert.h
+dispslaterkirkw.o = dispslaterkirkw.o $(_mod_constants) $(_mod_lapackroutines) $(_mod_dispiface) $(_mod_periodic) $(_mod_dispcommon) $(_mod_message) $(_mod_simplealgebra) $(_mod_accuracy) $(assert.h)
+_mod_dispslaterkirkw: dispslaterkirkw.o
+_mod_dispslaterkirkw = $(dispslaterkirkw.o)
+
+dispuff.o: _mod_constants _mod_lapackroutines _mod_dispiface _mod_periodic _mod_dispcommon _mod_simplealgebra _mod_accuracy assert.h
+dispuff.o = dispuff.o $(_mod_constants) $(_mod_lapackroutines) $(_mod_dispiface) $(_mod_periodic) $(_mod_dispcommon) $(_mod_simplealgebra) $(_mod_accuracy) $(assert.h)
+_mod_dispuff_module: dispuff.o
+_mod_dispuff_module = $(dispuff.o)
+
+dispuffdata.o: _mod_message _mod_accuracy _mod_constants _mod_charmanip
+dispuffdata.o = dispuffdata.o $(_mod_message) $(_mod_accuracy) $(_mod_constants) $(_mod_charmanip)
+_mod_dispuffdata: dispuffdata.o
+_mod_dispuffdata = $(dispuffdata.o)
+
+elecconstraints.o: _mod_accuracy _mod_commontypes assert.h allocate.h _mod_angmomentum
+elecconstraints.o = elecconstraints.o $(_mod_accuracy) $(_mod_commontypes) $(assert.h) $(allocate.h) $(_mod_angmomentum)
+_mod_elecconstraints: elecconstraints.o
+_mod_elecconstraints = $(elecconstraints.o)
+
+emfields.o: _mod_commontypes allocate.h assert.h _mod_angmomentum _mod_simplealgebra _mod_accuracy _mod_constants
+emfields.o = emfields.o $(_mod_commontypes) $(allocate.h) $(assert.h) $(_mod_angmomentum) $(_mod_simplealgebra) $(_mod_accuracy) $(_mod_constants)
+_mod_emfields: emfields.o
+_mod_emfields = $(emfields.o)
+
+energies.o: _mod_accuracy assert.h allocate.h
+energies.o = energies.o $(_mod_accuracy) $(assert.h) $(allocate.h)
+_mod_energies: energies.o
+_mod_energies = $(energies.o)
+
+etemp.o: _mod_hermite _mod_constants _mod_sorting assert.h _mod_factorial _mod_message _mod_errorfunction _mod_accuracy
+etemp.o = etemp.o $(_mod_hermite) $(_mod_constants) $(_mod_sorting) $(assert.h) $(_mod_factorial) $(_mod_message) $(_mod_errorfunction) $(_mod_accuracy)
+_mod_etemp: etemp.o
+_mod_etemp = $(etemp.o)
+
+externalcharges.o: _mod_constants assert.h _mod_coulomb _mod_blasroutines _mod_periodic _mod_accuracy allocate.h
+externalcharges.o = externalcharges.o $(_mod_constants) $(assert.h) $(_mod_coulomb) $(_mod_blasroutines) $(_mod_periodic) $(_mod_accuracy) $(allocate.h)
+_mod_externalcharges: externalcharges.o
+_mod_externalcharges = $(externalcharges.o)
+
+forces.o: _mod_commontypes allocate.h assert.h _mod_scc _mod_nonscc _mod_accuracy _mod_slakocont
+forces.o = forces.o $(_mod_commontypes) $(allocate.h) $(assert.h) $(_mod_scc) $(_mod_nonscc) $(_mod_accuracy) $(_mod_slakocont)
+_mod_forces: forces.o
+_mod_forces = $(forces.o)
+
+nonscc.o: _mod_commontypes assert.h _mod_sk _mod_message _mod_accuracy _mod_slakocont
+nonscc.o = nonscc.o $(_mod_commontypes) $(assert.h) $(_mod_sk) $(_mod_message) $(_mod_accuracy) $(_mod_slakocont)
+_mod_nonscc: nonscc.o
+_mod_nonscc = $(nonscc.o)
+
+orbitalequiv.o: _mod_accuracy _mod_commontypes assert.h allocate.h
+orbitalequiv.o = orbitalequiv.o $(_mod_accuracy) $(_mod_commontypes) $(assert.h) $(allocate.h)
+_mod_orbitalequiv: orbitalequiv.o
+_mod_orbitalequiv = $(orbitalequiv.o)
+
+periodic.o: _mod_commontypes _mod_memman allocate.h _mod_sorting _mod_message _mod_bisect _mod_linkedlist _mod_simplealgebra _mod_accuracy assert.h _mod_constants
+periodic.o = periodic.o $(_mod_commontypes) $(_mod_memman) $(allocate.h) $(_mod_sorting) $(_mod_message) $(_mod_bisect) $(_mod_linkedlist) $(_mod_simplealgebra) $(_mod_accuracy) $(assert.h) $(_mod_constants)
+_mod_periodic: periodic.o
+_mod_periodic = $(periodic.o)
+
+pmlocalisation.o: _mod_sparse2dense allocate.h _mod_sorting assert.h _mod_blasroutines _mod_message _mod_accuracy
+pmlocalisation.o = pmlocalisation.o $(_mod_sparse2dense) $(allocate.h) $(_mod_sorting) $(assert.h) $(_mod_blasroutines) $(_mod_message) $(_mod_accuracy)
+_mod_pmlocalisation: pmlocalisation.o
+_mod_pmlocalisation = $(pmlocalisation.o)
+
+populations.o: _mod_commontypes allocate.h assert.h _mod_periodic _mod_accuracy _mod_constants
+populations.o = populations.o $(_mod_commontypes) $(allocate.h) $(assert.h) $(_mod_periodic) $(_mod_accuracy) $(_mod_constants)
+_mod_populations: populations.o
+_mod_populations = $(populations.o)
+
+potentials.o: _mod_accuracy _mod_commontypes assert.h allocate.h
+potentials.o = potentials.o $(_mod_accuracy) $(_mod_commontypes) $(assert.h) $(allocate.h)
+_mod_potentials: potentials.o
+_mod_potentials = $(potentials.o)
+
+repcont.o: _mod_accuracy _mod_reppoly assert.h allocate.h _mod_repspline
+repcont.o = repcont.o $(_mod_accuracy) $(_mod_reppoly) $(assert.h) $(allocate.h) $(_mod_repspline)
+_mod_repcont: repcont.o
+_mod_repcont = $(repcont.o)
+
+reppoly.o: _mod_accuracy _mod_bisect assert.h allocate.h
+reppoly.o = reppoly.o $(_mod_accuracy) $(_mod_bisect) $(assert.h) $(allocate.h)
+_mod_reppoly: reppoly.o
+_mod_reppoly = $(reppoly.o)
+
+repspline.o: _mod_accuracy _mod_bisect assert.h allocate.h
+repspline.o = repspline.o $(_mod_accuracy) $(_mod_bisect) $(assert.h) $(allocate.h)
+_mod_repspline: repspline.o
+_mod_repspline = $(repspline.o)
+
+repulsive.o: _mod_accuracy assert.h _mod_repcont
+repulsive.o = repulsive.o $(_mod_accuracy) $(assert.h) $(_mod_repcont)
+_mod_repulsive: repulsive.o
+_mod_repulsive = $(repulsive.o)
+
+scc.o: _mod_commontypes _mod_fileid allocate.h assert.h _mod_chargeconstr _mod_coulomb _mod_blasroutines _mod_externalcharges _mod_periodic _mod_message _mod_shortgamma _mod_shift _mod_accuracy _mod_constants
+scc.o = scc.o $(_mod_commontypes) $(_mod_fileid) $(allocate.h) $(assert.h) $(_mod_chargeconstr) $(_mod_coulomb) $(_mod_blasroutines) $(_mod_externalcharges) $(_mod_periodic) $(_mod_message) $(_mod_shortgamma) $(_mod_shift) $(_mod_accuracy) $(_mod_constants)
+_mod_scc: scc.o
+_mod_scc = $(scc.o)
+
+sccinit.o: _mod_commontypes _mod_charmanip allocate.h _mod_fileid _mod_message _mod_accuracy assert.h
+sccinit.o = sccinit.o $(_mod_commontypes) $(_mod_charmanip) $(allocate.h) $(_mod_fileid) $(_mod_message) $(_mod_accuracy) $(assert.h)
+_mod_sccinit: sccinit.o
+_mod_sccinit = $(sccinit.o)
+
+shift.o: _mod_accuracy _mod_commontypes assert.h
+shift.o = shift.o $(_mod_accuracy) $(_mod_commontypes) $(assert.h)
+_mod_shift: shift.o
+_mod_shift = $(shift.o)
+
+shortgamma.o: _mod_message _mod_accuracy
+shortgamma.o = shortgamma.o $(_mod_message) $(_mod_accuracy)
+_mod_shortgamma: shortgamma.o
+_mod_shortgamma = $(shortgamma.o)
+
+sk.o: _mod_accuracy _mod_commontypes assert.h
+sk.o = sk.o $(_mod_accuracy) $(_mod_commontypes) $(assert.h)
+_mod_sk: sk.o
+_mod_sk = $(sk.o)
+
+slakocont.o: _mod_accuracy _mod_slakoeqgrid assert.h allocate.h
+slakocont.o = slakocont.o $(_mod_accuracy) $(_mod_slakoeqgrid) $(assert.h) $(allocate.h)
+_mod_slakocont: slakocont.o
+_mod_slakocont = $(slakocont.o)
+
+slakoeqgrid.o: _mod_accuracy _mod_message assert.h allocate.h _mod_interpolation
+slakoeqgrid.o = slakoeqgrid.o $(_mod_accuracy) $(_mod_message) $(assert.h) $(allocate.h) $(_mod_interpolation)
+_mod_slakoeqgrid: slakoeqgrid.o
+_mod_slakoeqgrid = $(slakoeqgrid.o)
+
+sparse2dense.o: _mod_commontypes _mod_memman allocate.h assert.h _mod_periodic _mod_accuracy _mod_constants
+sparse2dense.o = sparse2dense.o $(_mod_commontypes) $(_mod_memman) $(allocate.h) $(assert.h) $(_mod_periodic) $(_mod_accuracy) $(_mod_constants)
+_mod_sparse2dense: sparse2dense.o
+_mod_sparse2dense = $(sparse2dense.o)
+
+spin.o: _mod_accuracy _mod_commontypes assert.h _mod_shift _mod_message
+spin.o = spin.o $(_mod_accuracy) $(_mod_commontypes) $(assert.h) $(_mod_shift) $(_mod_message)
+_mod_spin: spin.o
+_mod_spin = $(spin.o)
+
+spinorbit.o: _mod_accuracy _mod_commontypes assert.h allocate.h _mod_angmomentum
+spinorbit.o = spinorbit.o $(_mod_accuracy) $(_mod_commontypes) $(assert.h) $(allocate.h) $(_mod_angmomentum)
+_mod_spinorbit: spinorbit.o
+_mod_spinorbit = $(spinorbit.o)
+
+stress.o: _mod_commontypes allocate.h assert.h _mod_repcont _mod_scc _mod_nonscc _mod_accuracy _mod_slakocont
+stress.o = stress.o $(_mod_commontypes) $(allocate.h) $(assert.h) $(_mod_repcont) $(_mod_scc) $(_mod_nonscc) $(_mod_accuracy) $(_mod_slakocont)
+_mod_stress: stress.o
+_mod_stress = $(stress.o)
+
+thirdorder.o: _mod_commontypes allocate.h assert.h _mod_charges _mod_periodic _mod_shortgamma _mod_accuracy
+thirdorder.o = thirdorder.o $(_mod_commontypes) $(allocate.h) $(assert.h) $(_mod_charges) $(_mod_periodic) $(_mod_shortgamma) $(_mod_accuracy)
+_mod_thirdorder_module: thirdorder.o
+_mod_thirdorder_module = $(thirdorder.o)
+
+# 1 "/home/syamija2/Softwares/dftb/modified_dftb_17.1/dftbplus-17.1/prog/dftb+/lib_io/make.deps"
+# 1 "<built-in>"
+# 1 "<command-line>"
+
+
+
+# 1 "/usr/include/stdc-predef.h" 1 3 4
+
+# 17 "/usr/include/stdc-predef.h" 3 4
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# 3 "<command-line>" 2
+# 1 "/home/syamija2/Softwares/dftb/modified_dftb_17.1/dftbplus-17.1/prog/dftb+/lib_io/make.deps"
+charmanip.o: assert.h
+charmanip.o = charmanip.o $(assert.h)
+_mod_charmanip: charmanip.o
+_mod_charmanip = $(charmanip.o)
+
+fileid.o: _mod_message
+fileid.o = fileid.o $(_mod_message)
+_mod_fileid: fileid.o
+_mod_fileid = $(fileid.o)
+
+formatout.o: _mod_sparse2dense _mod_fileid allocate.h _mod_lapackroutines _mod_accuracy assert.h _mod_constants
+formatout.o = formatout.o $(_mod_sparse2dense) $(_mod_fileid) $(allocate.h) $(_mod_lapackroutines) $(_mod_accuracy) $(assert.h) $(_mod_constants)
+_mod_formatout: formatout.o
+_mod_formatout = $(formatout.o)
+
+hsdparser.o: _mod_xmlutils _mod_message _mod_charmanip _mod_xmlf90 _mod_fileid assert.h allocate.h
+hsdparser.o = hsdparser.o $(_mod_xmlutils) $(_mod_message) $(_mod_charmanip) $(_mod_xmlf90) $(_mod_fileid) $(assert.h) $(allocate.h)
+_mod_hsdparser: hsdparser.o
+_mod_hsdparser = $(hsdparser.o)
+
+hsdutils.o: _mod_hsdparser _mod_accuracy allocate.h _mod_charmanip _mod_tokenreader _mod_stringlist _mod_linkedlist _mod_message _mod_xmlf90 assert.h _mod_xmlutils
+hsdutils.o = hsdutils.o $(_mod_hsdparser) $(_mod_accuracy) $(allocate.h) $(_mod_charmanip) $(_mod_tokenreader) $(_mod_stringlist) $(_mod_linkedlist) $(_mod_message) $(_mod_xmlf90) $(assert.h) $(_mod_xmlutils)
+_mod_hsdutils: hsdutils.o
+_mod_hsdutils = $(hsdutils.o)
+
+hsdutils2.o: _mod_hsdparser _mod_charmanip _mod_xmlutils assert.h _mod_hsdutils _mod_message _mod_xmlf90 _mod_accuracy _mod_unitconversion
+hsdutils2.o = hsdutils2.o $(_mod_hsdparser) $(_mod_charmanip) $(_mod_xmlutils) $(assert.h) $(_mod_hsdutils) $(_mod_message) $(_mod_xmlf90) $(_mod_accuracy) $(_mod_unitconversion)
+_mod_hsdutils2: hsdutils2.o
+_mod_hsdutils2 = $(hsdutils2.o)
+
+intrinsicpr.o: _mod_accuracy
+intrinsicpr.o = intrinsicpr.o $(_mod_accuracy)
+_mod_intrinsicpr: intrinsicpr.o
+_mod_intrinsicpr = $(intrinsicpr.o)
+
+ipisocket.o: _mod_fsockets allocate.h assert.h _mod_message _mod_logger _mod_accuracy
+ipisocket.o = ipisocket.o $(_mod_fsockets) $(allocate.h) $(assert.h) $(_mod_message) $(_mod_logger) $(_mod_accuracy)
+_mod_ipisocket: ipisocket.o
+_mod_ipisocket = $(ipisocket.o)
+
+logger.o: _mod_optarg _mod_accuracy
+logger.o = logger.o $(_mod_optarg) $(_mod_accuracy)
+_mod_logger: logger.o
+_mod_logger = $(logger.o)
+
+message.o:
+message.o = message.o
+_mod_message: message.o
+_mod_message = $(message.o)
+
+taggedoutput.o: _mod_accuracy assert.h
+taggedoutput.o = taggedoutput.o $(_mod_accuracy) $(assert.h)
+_mod_taggedoutput: taggedoutput.o
+_mod_taggedoutput = $(taggedoutput.o)
+
+tokenreader.o: _mod_charmanip _mod_xmlf90 assert.h _mod_accuracy _mod_message
+tokenreader.o = tokenreader.o $(_mod_charmanip) $(_mod_xmlf90) $(assert.h) $(_mod_accuracy) $(_mod_message)
+_mod_tokenreader: tokenreader.o
+_mod_tokenreader = $(tokenreader.o)
+
+xmlutils.o: _mod_charmanip assert.h _mod_xmlf90
+xmlutils.o = xmlutils.o $(_mod_charmanip) $(assert.h) $(_mod_xmlf90)
+_mod_xmlutils: xmlutils.o
+_mod_xmlutils = $(xmlutils.o)
+
+# 1 "/home/syamija2/Softwares/dftb/modified_dftb_17.1/dftbplus-17.1/prog/dftb+/lib_derivs/make.deps"
+# 1 "<built-in>"
+# 1 "<command-line>"
+
+
+
+# 1 "/usr/include/stdc-predef.h" 1 3 4
+
+# 17 "/usr/include/stdc-predef.h" 3 4
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# 3 "<command-line>" 2
+# 1 "/home/syamija2/Softwares/dftb/modified_dftb_17.1/dftbplus-17.1/prog/dftb+/lib_derivs/make.deps"
+numderivs2.o: _mod_accuracy assert.h allocate.h
+numderivs2.o = numderivs2.o $(_mod_accuracy) $(assert.h) $(allocate.h)
+_mod_numderivs2: numderivs2.o
+_mod_numderivs2 = $(numderivs2.o)
+
+# 1 "/home/syamija2/Softwares/dftb/modified_dftb_17.1/dftbplus-17.1/prog/dftb+/lib_common/make.deps"
+# 1 "<built-in>"
+# 1 "<command-line>"
+
+
+
+# 1 "/usr/include/stdc-predef.h" 1 3 4
+
+# 17 "/usr/include/stdc-predef.h" 3 4
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# 3 "<command-line>" 2
+# 1 "/home/syamija2/Softwares/dftb/modified_dftb_17.1/dftbplus-17.1/prog/dftb+/lib_common/make.deps"
+accuracy.o:
+accuracy.o = accuracy.o
+_mod_accuracy: accuracy.o
+_mod_accuracy = $(accuracy.o)
+
+allocate.o: assert.h
+allocate.o = allocate.o $(assert.h)
+_mod_allocation: allocate.o
+_mod_allocation = $(allocate.o)
+
+assert.o:
+assert.o = assert.o
+_mod_assert: assert.o
+_mod_assert = $(assert.o)
+
+constants.o: _mod_accuracy
+constants.o = constants.o $(_mod_accuracy)
+_mod_constants: constants.o
+_mod_constants = $(constants.o)
+
+memman.o: _mod_accuracy
+memman.o = memman.o $(_mod_accuracy)
+_mod_memman: memman.o
+_mod_memman = $(memman.o)
+
+optarg.o: _mod_accuracy
+optarg.o = optarg.o $(_mod_accuracy)
+_mod_optarg: optarg.o
+_mod_optarg = $(optarg.o)
+
+unitconversion.o: _mod_constants
+unitconversion.o = unitconversion.o $(_mod_constants)
+_mod_unitconversion: unitconversion.o
+_mod_unitconversion = $(unitconversion.o)
+
+# 1 "/home/syamija2/Softwares/dftb/modified_dftb_17.1/dftbplus-17.1/prog/dftb+/includes/make.deps"
+# 1 "<built-in>"
+# 1 "<command-line>"
+
+
+
+# 1 "/usr/include/stdc-predef.h" 1 3 4
+
+# 17 "/usr/include/stdc-predef.h" 3 4
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# 3 "<command-line>" 2
+# 1 "/home/syamija2/Softwares/dftb/modified_dftb_17.1/dftbplus-17.1/prog/dftb+/includes/make.deps"
+allocate.h: _mod_allocation
+allocate.h = $(_mod_allocation)
+
+
+
+
+
+assert.h =
+
+
+# 1 "/home/syamija2/Softwares/dftb/modified_dftb_17.1/dftbplus-17.1/prog/dftb+/lib_extlibs/make.extdeps"
+# 1 "<built-in>"
+# 1 "<command-line>"
+
+
+
+# 1 "/usr/include/stdc-predef.h" 1 3 4
+
+# 17 "/usr/include/stdc-predef.h" 3 4
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# 3 "<command-line>" 2
+# 1 "/home/syamija2/Softwares/dftb/modified_dftb_17.1/dftbplus-17.1/prog/dftb+/lib_extlibs/make.extdeps"
+xmlf90.o: _extlib_xmlf90
+xmlf90.o += _extlib_xmlf90
+
+fsockets.o: _extlib_fsockets
+fsockets.o += _extlib_fsockets
+
+blas.o: _extlib_blas
+blas.o += _extlib_blas
+
+lapack.o: _extlib_lapack _extlib_blas
+lapack.o += _extlib_lapack _extlib_blas
+
+dftd3.o: _extlib_dftd3
+dftd3.o += _extlib_dftd3
+
