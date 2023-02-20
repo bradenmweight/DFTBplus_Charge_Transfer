@@ -1,0 +1,88 @@
+
+###################################################################
+###################################################################
+Geometry = {
+
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+  TypeNames = {
+    $atomNames   
+  }
+
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+  TypesAndCoordinates[Angstrom] = {
+ $xyz
+  }
+
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+  Periodic = NO 
+
+###################################################################
+###################################################################
+Hamiltonian = DFTB {
+  Charge = $charge
+  ReadInitialCharges = NO 
+  SCC = yes
+  SCCTolerance = 1.e-5 # should be 10^(-5) by default
+  MaxSCCIterations = $maxIter
+
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+  ForceEvaluation = "dynamicsT0" # For Electron Temperature = 0 K, use "dynamicsT0" instead of "dynamics"
+  ThirdOrderFull = No
+
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+  SpinPolarisation = {}
+  Eigensolver = RelativelyRobust{}
+  ElectricField = {}
+  Dispersion = LennardJones {
+    Parameters = UFFParameters {}
+  }
+
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+  SlaterKosterFiles = Type2FileNames {
+    Prefix = $skfLocation
+    Separator = "-"
+    Suffix = ".skf"
+    LowerCaseTypeName = No
+  }
+
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+  MaxAngularMomentum = {
+    $angularMomentum
+  }
+
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+  Mixer = Broyden {
+  }
+
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+  Filling = Fermi {
+    Temperature[Kelvin] = 0.0000000000000000
+  }
+}
+
+###################################################################
+###################################################################
+Options = {
+  WriteDetailedOut = Yes
+  WriteHS = Yes # only builds H and S. No SCC or diagonalization
+}
+
+###################################################################
+###################################################################
+ParserOptions = {
+  ParserVersion = 5
+  WriteHSDInput = Yes
+  StopAfterParsing = No
+}
+
+###################################################################
+###################################################################
+Analysis = {
+  MullikenAnalysis = Yes # Default is Yes
+  WriteBandOut = Yes # Default is Yes
+  WriteEigenvectors = Yes # Default is No
+  EigenvectorsAsTxt = Yes # Default is No
+#
+#  CalculateForces = Yes
+#  ProjectStates = {}  
+}

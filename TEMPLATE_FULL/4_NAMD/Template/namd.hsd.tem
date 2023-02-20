@@ -1,0 +1,104 @@
+
+###################################################################
+###################################################################
+Geometry = {
+
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+  TypeNames = {
+    $atomNames
+  }
+
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+  TypesAndCoordinates[Angstrom] = {
+    $xyz
+  }
+
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+  Periodic = NO 
+}
+
+###################################################################
+###################################################################
+Driver = VelocityVerlet{                                              
+  Steps = $steps #number of NAMD steps to perform                        
+  TimeStep [Femtosecond] = $timeStep # 1 fs = 41.341374576 in au            
+  MDRestartFrequency = 1 # Writes geom and vel at each step           
+  OutputPrefix = "geom.out"                                           
+  ConvergentForcesOnly = NO # NO means no need to converge SCC charge. 
+  #If kept NO, then use "ForceEvaluation" keyword in DFTB section
+  KeepStationary = Yes # Remove translational motion from the system  
+  MovedAtoms = {
+    1:-1
+  }                                                                   
+  Thermostat = None {
+  }
+  Velocities [AA/ps] = {
+  $vel
+  }
+}
+                                                                     
+###################################################################
+###################################################################
+Hamiltonian = DFTB {
+  Charge = $Charge
+  SCC = yes
+  SCCTolerance = 1e-5 # should be 10^(-5) by default
+  MaxSCCIterations = 1000
+
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+  ForceEvaluation = $Driver # For Electron Temperature = 0 K, use "dynamicsT0" instead of "dynamics"
+  ThirdOrderFull = No
+
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+  SpinPolarisation = {}
+  Eigensolver = RelativelyRobust{}
+  ElectricField = {}
+  Dispersion = LennardJones {
+    Parameters = UFFParameters {}
+  }
+
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+  SlaterKosterFiles = Type2FileNames {
+    Prefix = $skfLocation
+    Separator = "-"
+    Suffix = ".skf"
+    LowerCaseTypeName = No                                                                                                                                    
+  }                                                                                                                                                           
+                                                                                                                                                              
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!                                                                                           
+  MaxAngularMomentum = {
+  $angularMomentum
+  }
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!                                                                                           
+  Mixer = Broyden {                                                                                                                                                           
+  }                                                                                                                                                           
+                                                                                                                                                              
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!                                                                                           
+  Filling = Fermi {                                                                                                                                           
+    Temperature[Kelvin] = $Fermi                                                                                                                 
+  }                                                                                                                                                           
+                                                                                                                                                              
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!                                                                                           
+}                                                                                                                                                             
+                                                                                                                                                              
+###################################################################                                                                                           
+###################################################################                                                                                           
+Options = {                                                                                                                                                   
+  WriteDetailedOut = Yes                                                                                                                                      
+  WriteResultsTag = Yes  # needed for most of the post processing tools                                                                                       
+}                                                                                                                                                             
+                                                                                                                                                              
+###################################################################                                                                                           
+###################################################################                                                                                           
+ParserOptions = {                                                                                                                                             
+  ParserVersion = 5                                                                                                                                           
+  WriteHSDInput = Yes                                                                                                                        
+  StopAfterParsing = NO # Put it as Yes for checking your input                                                                                               
+}                                                                                                                                                             
+
+Analysis = {                                                                                                                                                  
+  MullikenAnalysis = Yes # Default is Yes                                                                                                                     
+  WriteBandOut = Yes # Default is Yes                                                                                                                                       
+}                                                                                                                                                             
+                                                                                                                                                              
+         
