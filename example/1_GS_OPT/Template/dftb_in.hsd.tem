@@ -1,0 +1,102 @@
+
+###################################################################
+###################################################################
+Geometry = {
+
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+  TypeNames = {
+    $atomNames
+  }
+
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+  TypesAndCoordinates[Angstrom] = {
+    $xyz
+  }
+
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+  Periodic = NO #YES                                 
+                                             
+}
+
+###################################################################
+Driver = ConjugateGradient {
+
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+  MovedAtoms = {
+   1:-1
+  }
+
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+  MaxForceComponent = 1E-4
+  MaxSteps = 10000
+  OutputPrefix = "geom.out"
+  AppendGeometries = Yes
+  ConvergentForcesOnly = Yes # NO means no need to converge SCC charge
+
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+  Constraints = {}
+}
+
+###################################################################
+###################################################################
+Hamiltonian = DFTB {
+  Charge = $charge
+  ReadInitialCharges = No
+  InitialCharges = {}
+
+  SCC = yes
+  SCCTolerance = 1e-5 # should be 10^(-5) by default
+  MaxSCCIterations = $maxIterations
+  OrbitalResolvedSCC = No # can't be used with DFTB3
+
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+  ThirdOrder = No # Keep ThirdOrderFull = YES if you want DFTB3. 
+
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+  SpinPolarisation = {}
+  Eigensolver = RelativelyRobust {}
+  ElectricField = {}
+  Dispersion = LennardJones {
+   Parameters = UFFParameters {}
+  }
+
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+  SlaterKosterFiles = Type2FileNames {
+    Prefix = $skfLocation
+    Separator = "-"
+    Suffix = ".skf"
+    LowerCaseTypeName = No
+  }
+
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+  MaxAngularMomentum = {
+    $angularMomentum
+  }
+
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+  Mixer = Broyden {
+  }
+
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+  Filling = Fermi {
+    Temperature[Kelvin] = $Fermi
+  }
+
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+}
+
+###################################################################
+###################################################################
+Options = {
+  WriteBandOut = Yes
+  WriteDetailedOut = Yes
+  WriteResultsTag = Yes  # needed for most of the post processing tools
+  WriteDetailedXML = Yes # needed for wfn plots
+}
+
+###################################################################
+###################################################################
+ParserOptions = {
+  ParserVersion = 4
+  WriteHSDInput = Yes
+}

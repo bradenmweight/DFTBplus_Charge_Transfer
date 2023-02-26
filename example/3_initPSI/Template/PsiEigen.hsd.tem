@@ -1,0 +1,90 @@
+
+###################################################################
+###################################################################
+Geometry = {
+
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+  TypeNames = {
+$atomNames
+  }
+
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+  TypesAndCoordinates[Angstrom] = {
+  $xyz
+  }
+
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+  Periodic = NO # YES
+ }
+
+###################################################################
+###################################################################
+Hamiltonian = DFTB {
+  Charge = $Charge
+  ReadInitialCharges = NO 
+  SCC = yes
+  SCCTolerance = 1.e-5 # should be 10^(-5) by default
+  MaxSCCIterations = 1000
+
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+  ForceEvaluation = $Driver #For Electron Temperature = 0 K, use "dynamicsT0" instead of "dynamics"
+  ThirdOrderFull = No
+
+
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+  SpinPolarisation = {}
+  Eigensolver = RelativelyRobust{}
+  ElectricField = {}
+  Dispersion = LennardJones {
+    Parameters = UFFParameters {}
+  }
+
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+  SlaterKosterFiles = Type2FileNames {
+    Prefix =  $skfLocation
+    Separator = "-"
+    Suffix = ".skf"
+    LowerCaseTypeName = No
+  }
+
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+  MaxAngularMomentum = {
+  $angularMomentum
+  }
+
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+  Mixer = Broyden {
+  }
+
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+  Filling = Fermi {
+    Temperature[Kelvin] = $Fermi
+  }
+}
+
+###################################################################
+###################################################################
+Options = {
+  WriteDetailedOut = Yes
+  WriteHS = $WriteHS
+}
+
+###################################################################
+###################################################################
+ParserOptions = {
+  ParserVersion = 5
+  WriteHSDInput = Yes
+  StopAfterParsing = No
+}
+
+###################################################################
+###################################################################
+Analysis = {
+  MullikenAnalysis = Yes # Default is Yes
+  WriteBandOut = Yes # Default is Yes
+  WriteEigenvectors = Yes # Default is No
+  EigenvectorsAsTxt = Yes # Default is No
+#
+#  CalculateForces = Yes
+#  ProjectStates = {}  
+}

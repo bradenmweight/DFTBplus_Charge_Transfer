@@ -1,0 +1,10 @@
+#!/bin/bash
+#SBATCH -p action
+#SBATCH -J DFTB+_makePsi
+#SBATCH -o output.slurm
+#SBATCH -t 1-00:00:00
+#SBATCH -N 1
+#SBATCH --ntasks-per-node=1
+#SBATCH --mem 5GB
+
+python createPsi.py $ith $LUMO

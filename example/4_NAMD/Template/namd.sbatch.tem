@@ -1,0 +1,15 @@
+#!/bin/bash
+#SBATCH -p action
+#SBATCH -J DFTB+
+#SBATCH -o output.slurm
+#SBATCH -t 30-00:00:00
+#SBATCH -N 1
+#SBATCH --ntasks-per-node=1
+#SBATCH --mem 5GB
+
+export OMP_NUM_THREADS=1
+export MKL_NUM_THREADS=1
+
+module load intel
+/scratch/bweight/software/FSSH_dftb_17.1/_install/bin/dftb+ < dftb_in.hsd >>  output.log
+

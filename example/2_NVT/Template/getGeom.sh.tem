@@ -1,0 +1,10 @@
+#!/bin/bash
+#SBATCH -p debug
+#SBATCH -J DFTB+_NVT
+#SBATCH -o output.slurm
+#SBATCH -t 00:10:00
+#SBATCH -N 1
+#SBATCH --ntasks-per-node=1
+#SBATCH --mem 5GB
+
+python getGeom.py $N
