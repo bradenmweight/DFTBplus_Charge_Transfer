@@ -2,25 +2,27 @@ import numpy as np
 from matplotlib import pyplot as plt
 
 def get_globals():
-    global NSteps
-    NSteps = 500
+    global NTRAJ,NSTEPS
+    NTRAJ = 50
+    NSTEPS = 3000
+
 
 def get_average(filename):
     
     print(f"Reading {filename}.")
-    data = np.loadtxt(f'step1/{filename}') * 0.0
+    data = np.loadtxt(f'step1/{filename}')[:NSTEPS] * 0.0
 
     counter = 0
-    for step in range( 1,NSteps+1 ):
+    for traj in range( 1,NTRAJ+1 ):
         try:
-            data += np.loadtxt(f'step{step}/{filename}')
+            data += np.loadtxt(f'step{traj}/{filename}')[:NSTEPS]
         except:
-            print (f"\tFile no good. Skipping. Step = {step}")
+            print (f"\tFile no good. Skipping. Step = {traj}")
             continue
         counter += 1
-    print (f"There were {counter} good trajectories of {NSteps}.")
+    print (f"There were {counter} good trajectories of {NTRAJ}.")
     data /= counter
-    np.savetxt(f'{filename}_average.txt',data)
+    np.savetxt(f'{filename}_average-{counter}.txt',data)
     
     return data[:,0], data[:,1:-1], counter
     
